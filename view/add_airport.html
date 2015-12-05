@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dfs">
+
+<head>
+
+    <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="../css/custom-style.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="../css/custom.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body ng-controller="airport">
+
+<header id="header" class="page-topbar" style="position:relative;">
+    <div class="navbar-fixed">
+        <nav class="black">
+            <div class="nav-wrapper">
+
+                <ul class="left">
+                    <li class="no-hover"><a href="#" data-activates="slide-out" class="menu-sidebar-collapse"><i class="mdi-navigation-menu" ></i></a></li>
+                    <li><h5 class="logo-wrapper"><span class="logo-text">Flights</span></h5></li>
+                </ul>
+
+                <ul class="right hide-on-med-and-down">
+
+                    <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light" style="padding-top:15px;"><i class="mdi-social-notifications"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<div id="main" style="position:relative;">
+    <div class="wrapper">
+
+
+
+        <section id="content" >
+            <div class="container">
+
+                <div class="col s12 add_report_con">
+                    <div class="row">
+
+
+                        <form name="addAirport" id="addAirport" ng-cloak class="ng-cloak">
+
+                            <div class="input-field col s12">
+                                <input placeholder="Search Airport" name="airport" id="airport" type="text" ng-model="airport" class="validate" ng-click="showAirport()">
+                                <span id="airportErr" class="{{errorMsgClass2}}">
+                                    {{airportErrMsg}}
+                                </span>
+                            </div>
+
+
+                            <div class="col s12 center" style="justify-content:center; display:flex;">
+                                <p>
+
+                                    <span class="btn waves-effect waves-light indigo button_color" ng-click="validate()">
+                                        Next&nbsp; <i class="mdi-navigation-arrow-forward icon_arrow"></i>
+                                    </span>
+                                </p>
+
+                            </div>
+
+                        </form>
+
+                        <div class="col s12 center" ng-show="false" ng-cloak>
+                            <p>
+                                <i class="mdi-alert-error" style="color:#4a90e2;"></i>
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <input type="hidden" id="mp-menu">
+    </div>
+</div>
+
+<div class="ng-cloak" style="position:absolute; background-color:white;top:0;z-index:999;width:100%;  min-height:600px;" id="airportDiv" ng-show=airportState ng-cloak>
+
+    <header id="header2" class="page-topbar">
+        <div class="navbar-fixed">
+            <nav class="orange">
+                <div class="nav-wrapper">
+
+                    <ul class="left">
+                        <li class="no-hover" ><a href="#" class="menu-sidebar-collapse" ng-click="backToDefault()"><i class="mdi-navigation-arrow-back"></i></a></li>
+                        <li><h5 class="logo-wrapper"><span class="logo-text">Arrival Airport</span></h5></li>
+                    </ul>
+
+
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section id="content1"  >
+        <!--start container-->
+        <div class="header-search-wrapper hide-on-med-and-down" style="position: fixed;">
+            <i class="mdi-action-search active" style="color:#b6b6b6"></i>
+            <form id="form" role="form" name="but">
+            <input type="text" id="search" ng-model="search" ng-change="searchAirport()" name="search" class="header-search-input z-depth-2 form-control" placeholder="Search Airport By Typing Country Name">
+                </form>
+        </div>
+
+            <div class="row">
+        <div id="listAirportsData" class="col s12" style="padding-top: 51px;" ng-if="showAirportList">
+            <div ng-repeat="data in airport">
+            <div  ng-click="airportSelect(data.airport_code)"  style="color: rgb(30, 108, 181);margin-bottom: 5px;" id="airportList">
+                {{data.name}}{{comma}}{{data.airport_code}}
+            <div style="font-size: 10px;margin-top: -3px;color: rgb(108, 108, 108);">
+                <span >{{data.city}}</span>{{comma}}
+                <span >{{data.country}}</span>
+            </div>
+                <hr flex>
+            </div>
+        </div>
+
+        </div>
+
+        <div ng-if="!showAirportList" class="col s12" style="text-align:center;font-weight:bold;padding-top: 51px;">
+            {{showSearchError}}
+            <div ng-if="processing">
+                <img src="../images/238.GIF">
+            </div>
+        </div> </div>
+    </section>
+
+    </div>
+
+<!-- ================================================
+Scripts
+================================================ -->
+<script type="text/javascript" src="../js/angular.js"></script>
+<script src="../js/angular-material-min.js"></script>
+<script src="../js/angular-route.js"></script>
+<script src="../js/angular-cookies.js"></script>
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../js/materialize.js"></script>
+<script src="../controllers/main_controller.js"></script>
+<script type="text/javascript" src="../controllers/add_airport.js"></script>
+
+<script>
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
