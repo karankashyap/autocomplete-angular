@@ -33,3 +33,75 @@ app.service("GLOBALS", function () {
 
 });
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                DroidNgNG                                 //
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+app.service('DroidNg', function () {
+
+    ///////////////////////////////
+    //           Get            //
+    ///////////////////////////////
+
+    this.getUserId = function () {
+        return '1';
+    };
+
+    this.getUserName = function () {
+        return 'Karan';
+    };
+
+    this.getUserMobile = function () {
+        return '9999999999';
+    };
+
+    this.getDeviceId = function () {
+        return 'SM-9005';
+    };
+
+    this.getUserToken = function () {
+        return '89869as6df9a689sdf6asd9a86';
+    };
+
+    this.getUserEmail = function () {
+        return 'karan@email.com';
+    };
+
+    this.getUserPic = function () {
+        return 'karan.jpg';
+    };
+
+
+    ///////////////////////////////
+    //           Set            //
+    ///////////////////////////////
+
+    this.setUserId = function (user_id) {
+    };
+
+    this.setUserName = function (user_name) {
+    };
+
+    this.setUserMobile = function (user_mbl) {
+    };
+
+    this.setDeviceId = function () {
+    };
+
+    this.setUserToken = function (token) {
+    };
+
+    this.setUserEmail = function (email) {
+    };
+
+    this.setUserPic = function (pic) {
+    };
+
+    this.logMessage = function (msg) {
+        console.log(msg);
+    };
+
+    this.alertShow = function (alertMsg) {
+        alert(alertMsg);
+    };
+
+});
