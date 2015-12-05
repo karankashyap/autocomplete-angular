@@ -22,12 +22,6 @@
                     <li><h5 class="logo-wrapper"><span class="logo-text">Flights</span></h5></li>
                 </ul>
 
-                <ul class="right hide-on-med-and-down">
-
-                    <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light" style="padding-top:15px;"><i class="mdi-social-notifications"></i></a>
-                    </li>
-
-                </ul>
             </div>
         </nav>
     </div>
@@ -66,9 +60,9 @@
 
                         </form>
 
-                        <div class="col s12 center" ng-show="false" ng-cloak>
+                        <div class="col s12 center" ng-show="finalShow" ng-cloak>
                             <p>
-                                <i class="mdi-alert-error" style="color:#4a90e2;"></i>
+                                Ng-Autocomplete by Karan Kashyap
                             </p>
                         </div>
 
@@ -91,7 +85,7 @@
 
                     <ul class="left">
                         <li class="no-hover" ><a href="#" class="menu-sidebar-collapse" ng-click="backToDefault()"><i class="mdi-navigation-arrow-back"></i></a></li>
-                        <li><h5 class="logo-wrapper"><span class="logo-text">Arrival Airport</span></h5></li>
+                        <li><h5 class="logo-wrapper"><span class="logo-text">Search Airports</span></h5></li>
                     </ul>
 
 
@@ -104,13 +98,14 @@
         <div class="header-search-wrapper hide-on-med-and-down" style="position: fixed;">
             <i class="mdi-action-search active" style="color:#b6b6b6"></i>
             <form id="form" role="form" name="but">
-            <input type="text" id="search" ng-model="search" ng-change="searchAirport()" name="search" class="header-search-input z-depth-2 form-control" placeholder="Search Airport By Typing Country Name">
+                <input type="text" id="search" ng-model="search" ng-change="searchAirport()" name="search"
+                       class="header-search-input z-depth-2 form-control" placeholder="Type 3 letters to search">
                 </form>
         </div>
 
             <div class="row">
         <div id="listAirportsData" class="col s12" style="padding-top: 51px;" ng-if="showAirportList">
-            <div ng-repeat="data in airport">
+            <div ng-repeat="data in airport | filter:search">
             <div  ng-click="airportSelect(data.airport_code)"  style="color: rgb(30, 108, 181);margin-bottom: 5px;" id="airportList">
                 {{data.name}}{{comma}}{{data.airport_code}}
             <div style="font-size: 10px;margin-top: -3px;color: rgb(108, 108, 108);">
