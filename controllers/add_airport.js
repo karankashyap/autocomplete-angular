@@ -26,8 +26,9 @@ app.controller('airport', ['$scope', '$http', 'ws', 'GLOBALS', '$document', 'Dro
             if (queryLen == 0) {
                 $scope.listAirport = $scope.listCity = $scope.listCountry = $scope.listCode = '';
             }
+            var jsonFile = '../resources/list.json';
             if (queryLen > 2) {
-                $http.get(airportList).success(function (airport) {
+                $http.get(jsonFile).success(function (airport) {
                     DroidNg.logMessage(angular.fromJson(airport));
                     $scope.processing = false;
                     if (airport.response == false) {
@@ -63,11 +64,7 @@ app.controller('airport', ['$scope', '$http', 'ws', 'GLOBALS', '$document', 'Dro
         };
 
         $scope.validate = function () {
-            var flight = $scope.flight;
-            var airport = $scope.airport;
-            var arrTime = $("#arrTime").val();
-
-            DroidNg.logMessage(arrTime);
+            $scope.finalShow = true;
 
         };
 
