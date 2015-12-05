@@ -68,36 +68,6 @@ app.controller('airport', ['$scope', '$http', 'ws', 'GLOBALS', '$document', 'Dro
             var arrTime = $("#arrTime").val();
 
             DroidNg.logMessage(arrTime);
-            var proceed = true;
-            $scope.errorMsgClass1 = $scope.errorMsgClass2 = $scope.errorMsgClass3 = 'valErrColor';
-
-
-            if (flight === undefined) {
-                var data = 'Flight cannot be empty';
-                $scope.errorMsgClass1 = 'valErr';
-                $scope.flightErrMsg = data;
-                //$scope.showSimpleToast(data);
-                proceed = false;
-            }
-            if (airport === undefined) {
-                var data = 'Airport cannot be empty';
-                $scope.errorMsgClass2 = 'valErr';
-                $scope.airportErrMsg = data;
-                //$scope.showSimpleToast(data);
-                proceed = false;
-            }
-            if (arrTime === undefined || arrTime == '') {
-                var data = 'Arrival Time cannot be empty';
-                $scope.errorMsgClass3 = 'valErr';
-                $scope.dateErrMsg = data;
-                //$scope.showSimpleToast(data);
-                proceed = false;
-            }
-            if (proceed == false) {
-                return 0;
-            } else if (proceed == true) {
-                $scope.flightAdd();
-            }
 
         };
 
