@@ -1,0 +1,201 @@
+.bottomSheetdemoBasicUsage .md-inline-list-icon-label {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -10px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.bottomSheetdemoBasicUsage .md-grid-item-content {
+    height: 96px;
+}
+
+.bottomSheetdemoBasicUsage .md-grid-item-content md-icon {
+    height: 48px;
+    width: 48px;
+}
+
+.bottomSheetdemoBasicUsage .md-grid-text {
+    padding-bottom: 5px;
+}
+
+.bottomSheetdemoBasicUsage md-list-item, .bottomSheetdemoBasicUsage md-list-item .md-list-item-inner {
+    min-height: 48px;
+}
+
+.bottomSheetdemoBasicUsage h2 {
+    line-height: 36px;
+    padding-top: 10px;
+}
+
+.bottomSheetdemoBasicUsage .md-subheader .md-subheader-inner {
+    padding: 0px;
+}
+
+.bottomSheetdemoBasicUsage md-toast {
+    background-color: #B14141;
+}
+
+.bottomSheetdemoBasicUsage md-toast > * {
+    font-weight: bolder;
+}
+
+.carddemoBasicUsage md-card {
+    min-height: 150px;
+}
+
+.dialogdemoBasicUsage #popupContainer {
+    position: relative;
+}
+
+.dialogdemoBasicUsage .debt-be-gone {
+    font-weight: bold;
+    color: blue;
+    text-decoration: underline;
+}
+
+.dialogdemoBasicUsage .footer {
+    width: 100%;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.dialogdemoBasicUsage .footer, .dialogdemoBasicUsage .footer > code {
+    font-size: 0.8em;
+    margin-top: 50px;
+}
+
+.menudemoBasicUsage .md-menu-demo {
+    padding: 24px;
+}
+
+.menudemoBasicUsage .menu-demo-container {
+    min-height: 200px;
+}
+
+.progressCirculardemoBasicUsage body {
+    padding: 20px;
+}
+
+.progressCirculardemoBasicUsage h4 {
+    margin: 10px 0;
+}
+
+.progressCirculardemoBasicUsage md-progress-circular {
+    margin-bottom: 20px;
+}
+
+.progressCirculardemoBasicUsage #loaders > md-switch {
+    margin: 0;
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
+.progressCirculardemoBasicUsage #loaders > h5 {
+    padding-top: 8px;
+}
+
+.progressCirculardemoBasicUsage #loaders > p {
+    margin-right: 20px;
+}
+
+.progressCirculardemoBasicUsage p.small {
+    font-size: 0.8em;
+    margin-top: -18px;
+}
+
+.progressCirculardemoBasicUsage hr {
+    width: 100%;
+    margin-top: 20px;
+    border-color: rgba(221, 221, 177, 0.1);
+}
+
+.progressCirculardemoBasicUsage p.small > code {
+    font-size: 0.8em;
+}
+
+.progressCirculardemoBasicUsage .visible {
+    border-color: rgba(221, 221, 177, 0);
+}
+
+.inputdemoBasicUsage md-datepicker {
+    margin-top: 18px;
+}
+
+.inputdemoBasicUsage .md-datepicker-button {
+    height: 36px;
+    width: 36px;
+    line-height: 36px;
+}
+
+.inputdemoBasicUsage .md-datepicker-input-container {
+    margin-left: 2px;
+}
+
+/*Material Modal*/
+
+.dialogdemoBasicUsage #popupContainer {
+    position: relative;
+}
+
+.dialogdemoBasicUsage .debt-be-gone {
+    font-weight: bold;
+    color: blue;
+    text-decoration: underline;
+}
+
+.dialogdemoBasicUsage .footer {
+    width: 100%;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.dialogdemoBasicUsage .footer, .dialogdemoBasicUsage .footer > code {
+    font-size: 0.8em;
+    margin-top: 50px;
+}
+
+/*Form Validation Error Message*/
+.valErr {
+    color: #c04446;
+    font-size: 0.8em;
+    padding: 5px;
+    border-radius: 7px;
+    border: #a9393a solid 0px;
+    margin-top: 4px;
+    animation: fadein 2s;
+}
+
+/*Form Validation Error Message*/
+.valErrColor {
+    color: #fff;
+    font-size: 0.8em;
+    padding: 5px;
+    border-radius: 7px;
+    border: #a9393a solid 0px;
+    margin-top: 4px;
+    animation: fadein 2s;
+    opacity: .1
+}
+
+.fadeInAnimate {
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+li {
+    vertical-align: middle;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+}
